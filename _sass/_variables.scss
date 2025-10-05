@@ -3,16 +3,19 @@
 // VARIABLES
 //
 
-// Colors
-$blue: #4183C4;
+// Fall Color Palette
+$primary: #8B4513;        // Saddle Brown (main brand color)
+$accent: #D2691E;         // Chocolate Orange
+$secondary: #CD853F;      // Peru (lighter brown)
+$highlight: #FF8C00;      // Dark Orange
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+// Fall Grays and Neutrals
+$black: #2F1B14;          // Dark brown-black
+$darkerGray: #4A3429;     // Dark brown
+$darkGray: #6B4E3D;       // Medium brown
+$gray: #8B7355;           // Warm gray
+$lightGray: #F5F5DC;      // Beige
+$white: #FFF8DC;          // Cornsilk white
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;

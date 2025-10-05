@@ -2,48 +2,299 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
+<div class="home-hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Sketch Club</h1>
+    <div class="hero-subtitle">
+      <h2>Every Monday at 7 PM</h2>
+      <p class="hero-location">Parish Studios • 14th and O Street</p>
+      <p class="hero-description">Come make art with us</p>
+      <p class="hero-info">Free to participate • Some craft supplies available</p>
+    </div>
+  </div>
+</div>
 
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
-        </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
+<div class="home-content">
+  <div class="welcome-section">
+    <h3>Welcome to SketchClub!</h3>
+    <p>Join our vibrant community of artists and creatives every Monday evening. Whether you're a seasoned artist or just starting your creative journey, SketchClub is the perfect place to explore your artistic side in a supportive, welcoming environment.</p>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <h4>🎨 Free Participation</h4>
+        <p>No cost to join our weekly sessions. Just bring yourself and your creativity!</p>
       </div>
+      <div class="feature">
+        <h4>🖌️ Supplies Available</h4>
+        <p>We provide basic art supplies, though you're welcome to bring your own materials too.</p>
+      </div>
+      <div class="feature">
+        <h4>🎤 Open Mic</h4>
+        <p>Every other week we host open mic sessions at 9:30 PM. Come share your music, poetry, or stories!</p>
+      </div>
+      <div class="feature">
+        <h4>🤝 Community Support</h4>
+        <p>Connect with fellow artists, share techniques, and grow together in a friendly atmosphere.</p>
+      </div>
+    </div>
+  </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
+  <div class="recent-posts">
+    <h3>Latest Updates</h3>
+    <div class="posts">
+      {% for post in paginator.posts limit:3 %}
+        <article class="post">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+            <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+          </a>
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    
+    {% if paginator.posts.size > 3 %}
+      <div class="view-all">
+        <a href="{{ site.baseurl }}/archive" class="btn-primary">View All Posts</a>
+      </div>
     {% endif %}
   </div>
-  {% endif %}
 </div>
+
+<style>
+/* Home Page Styles */
+.home-hero {
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin: -20px -10px 40px -10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
+}
+
+.hero-subtitle h2 {
+  font-size: 2.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-location {
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.6rem;
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+.hero-info {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+  background: rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.welcome-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.welcome-section h3 {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #6B4E3D;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background: #FFF8DC;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+  border-left: 5px solid #8B4513;
+}
+
+.feature h4 {
+  color: #8B4513;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  color: #6B4E3D;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.recent-posts {
+  margin-bottom: 40px;
+}
+
+.recent-posts h3 {
+  font-size: 2rem;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.posts {
+  display: grid;
+  gap: 25px;
+}
+
+.post {
+  background: #FFF8DC;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1);
+  border-left: 4px solid #D2691E;
+}
+
+.post h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #8B4513;
+}
+
+.post h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post h4 a:hover {
+  color: #D2691E;
+}
+
+.post_date {
+  color: #8B7355;
+  font-size: 0.9rem;
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+.entry {
+  color: #6B4E3D;
+  line-height: 1.6;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: #8B4513;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.btn-primary:hover {
+  background: #D2691E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-location {
+    font-size: 1.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1.4rem;
+  }
+  
+  .hero-info {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature {
+    padding: 20px 15px;
+  }
+  
+  .welcome-section h3 {
+    font-size: 2rem;
+  }
+  
+  .recent-posts h3 {
+    font-size: 1.6rem;
+  }
+}
+</style>

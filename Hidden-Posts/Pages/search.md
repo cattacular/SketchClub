@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Search
 permalink: /search/
@@ -18,4 +18,4 @@ permalink: /search/
     searchResultTemplate: '<div style="text-align: left !important;"><a href="{url}"><h1 style="text-align:left !important;">{title}</h1></a><span style="text-align:left !important;">{date}</span></div>',
     json: '{{ site.baseurl }}/search.json'
     });
-</script>
+</script> -->

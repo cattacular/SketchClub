@@ -4,26 +4,36 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Welcome to SketchClub, a vibrant community dedicated to fostering creativity and artistic growth for artists of all skill levels.
 
-## Features
+## Our Mission
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+At SketchClub, we believe that art is for everyone. Whether you're picking up a pencil for the first time or you're a seasoned artist looking to expand your horizons, our community provides a supportive environment where creativity can flourish.
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+## What We Do
+
+### 🤝 **Community Support**
+Our members come from all walks of life and skill levels. We foster an environment of encouragement, constructive feedback, and mutual learning. No judgment, just growth.
+
+### 📚 **Skill Building**
+We organize workshops, tutorials, and skill-sharing sessions where members can learn new techniques, explore different mediums, and improve their craft together.
+
+### 🌟 **Art Sharing & Feedback**
+Share your artwork with the community and receive constructive feedback. Celebrate your progress and inspire others with your creative journey.
+
+## Our Values
+
+- **Inclusivity**: Art is for everyone, regardless of skill level, background, or experience
+- **Growth**: We believe in continuous learning and improvement
+- **Community**: We're stronger together, supporting and inspiring each other
+- **Creativity**: We celebrate unique perspectives and artistic expression
+- **Fun**: Making art should be enjoyable and fulfilling
+
+## Join Us
+
+Ready to start your artistic journey with SketchClub? Check out our [Contact page](/contact/) to learn how to get involved, or simply start participating in our weekly challenges!
+
+---
+
+*"Every artist was first an amateur."* - Ralph Waldo Emerson

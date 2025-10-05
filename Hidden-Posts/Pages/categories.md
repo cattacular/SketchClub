@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 permalink: /categories/
 title: Categories
@@ -21,4 +21,4 @@ title: Categories
     {% endfor %}
   </div>
 {% endfor %}
-</div>
+</div> -->

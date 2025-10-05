@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Getting started with Reverie
 permalink: /getting-started/
@@ -48,4 +48,4 @@ The generated [RSS feed](https://en.wikipedia.org/wiki/RSS) of your blog can be 
 
 ## Sitemap
 
-The generated sitemap of your blog can be found at <https://yourgithubusername.github.io/sitemap>. You can see the example sitemap feed over [here](https://www.amitmerchant.com/reverie/sitemap).
+The generated sitemap of your blog can be found at <https://yourgithubusername.github.io/sitemap>. You can see the example sitemap feed over [here](https://www.amitmerchant.com/reverie/sitemap). -->
